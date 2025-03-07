@@ -7,3 +7,8 @@ window.addEventListener('scroll', function() {
         header.classList.remove('scrolled');
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    var video = document.querySelector('video');
+    video.muted = true;
+});

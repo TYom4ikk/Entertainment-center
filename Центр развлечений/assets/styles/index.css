@@ -8,6 +8,7 @@
     --additional-color: rgb(221, 87, 87);
     --additional-color-transparent: rgba(221, 87, 87, 0.764);
     --background-color: rgb(182, 120, 120);
+    --card-color: rgb(164, 113, 113);
     --text-color: white;
     --font: Arial;
 }
@@ -104,7 +105,7 @@ main{
     font-size: 42px;
 }
 
-.greeting-container iframe{
+.greeting-container video{
     margin-right: 130px;
     margin-left: 30px;
 }
@@ -170,7 +171,7 @@ main{
     margin: 14px 0;
 }
 
-.info iframe{
+.info video{
     margin-right: 70px;
 }
 
@@ -210,6 +211,7 @@ main{
     display: flex;
     align-items: center;
     flex-direction: column;
+    background-color: var(--card-color);
 }
 
 .card img{
@@ -296,7 +298,7 @@ main{
 
 footer{
     width: 100%;
-    background-color: gray;
+    background-color: var(--main-color);
     padding: 30px;
 }
 

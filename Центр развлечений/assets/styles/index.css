@@ -1,9 +1,9 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-:root{
+:root {
     --main-color: rgba(208, 63, 63, 0.689);
     --additional-color: rgb(221, 87, 87);
     --additional-color-transparent: rgba(221, 87, 87, 0.764);
@@ -13,37 +13,40 @@
     --font: Arial;
 }
 
-body{
+body {
     background-color: var(--background-color);
 }
-p{
+
+p {
     color: var(--text-color);
     font-family: var(--font);
 }
-h1{
+
+h1 {
     color: var(--text-color);
     font-family: var(--font);
 }
-h3{
+
+h3 {
     color: var(--text-color);
     font-family: var(--font);
 }
 
 /*==========HEADER==========*/
 
-.header-content{
+.header-content {
     background-color: none;
     width: 100%;
 
     display: flex;
-    
+
     position: fixed;
 
     align-items: center;
     transition: 0.5s;
 }
 
-header{
+header {
     width: 100%;
     height: 16vh;
 }
@@ -53,14 +56,14 @@ header{
     background-color: var(--additional-color-transparent);
 }
 
-.logo{
+.logo {
     width: 100px;
     height: 100px;
     margin-left: 10px;
     margin-top: 5px;
 }
 
-header input{
+header input {
     width: 400px;
     padding: 8px;
     border-radius: 8%;
@@ -69,7 +72,7 @@ header input{
     margin-top: 5px;
 }
 
-header button{
+header button {
     margin-top: 5px;
     margin-left: auto;
     margin-right: 10px;
@@ -81,7 +84,7 @@ header button{
     transition: 0.6s;
 }
 
-header button:hover{
+header button:hover {
     transition: 0.6s;
     transform: scale(1.2);
     background-color: var(--main-color);
@@ -89,44 +92,91 @@ header button:hover{
 
 /*==========MAIN==========*/
 
-main{
+main {
     width: 100%;
 }
 
+/*==========SLIDER==========*/
+
+.slider-container {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.prev-button,
+.next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
+}
+
 /*==========GREETING-CONTAINER==========*/
-.greeting-container{
+.greeting-container {
     width: 100%;
     padding: 20px;
     display: flex;
     justify-content: space-between;
 }
 
-.greeting-container h1{
+.greeting-container h1 {
     font-size: 42px;
 }
 
-.greeting-container video{
+.greeting-container video {
     margin-right: 130px;
     margin-left: 30px;
 }
 
-.greeting-container-content{
+.greeting-container-content {
     width: 40%;
 }
-.greeting-container-content h3{
+
+.greeting-container-content h3 {
     margin: 16px 0;
 }
 
-.greeting-container button{
+.greeting-container button {
     background-color: var(--additional-color);
-    color:var(--text-color);
+    color: var(--text-color);
     border: none;
     transition: 0.6s;
     padding: 6px;
     margin: 10px 5px;
 }
 
-.greeting-container button:hover{
+.greeting-container button:hover {
     background-color: var(--main-color);
     transition: 0.6s;
     transform: scale(1.2);
@@ -134,7 +184,7 @@ main{
 
 /*==========ADVANTAGES==========*/
 
-.advantages{
+.advantages {
     margin-top: 20px;
     width: 100%;
     display: flex;
@@ -142,17 +192,17 @@ main{
     justify-content: space-around;
 }
 
-.advantage{
+.advantage {
     width: 300px;
 }
 
-.advantage h3{
+.advantage h3 {
     margin: 8px 0;
 }
 
 /*==========INFO==========*/
 
-.info{
+.info {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -162,24 +212,25 @@ main{
     align-items: center;
 }
 
-.info-content{
+.info-content {
     width: 30%;
     margin-top: 170px;
     margin-left: 70px;
 }
-.info-content p{
+
+.info-content p {
     margin: 14px 0;
 }
 
-.info video{
+.info video {
     margin-right: 70px;
 }
 
 /*==========CARDS-CONTAINER==========*/
 
-.cards-container{
+.cards-container {
     width: 100%;
-   
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -187,12 +238,12 @@ main{
     padding: 30px;
 }
 
-.cards-container h1{
+.cards-container h1 {
     margin-top: 80px;
     margin-bottom: 30px;
 }
 
-.cards-list{
+.cards-list {
     width: 90%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
@@ -202,7 +253,7 @@ main{
     margin: 50px 0;
 }
 
-.card{
+.card {
     width: 400px;
     height: 800px;
     box-shadow: 4px 4px 8px 0px black;
@@ -214,46 +265,46 @@ main{
     background-color: var(--card-color);
 }
 
-.card img{
+.card img {
     width: 90%;
 }
 
-.card-content{
+.card-content {
     width: 80%;
 }
 
-.card-content .title{
+.card-content .title {
     font-size: 30px;
     margin-top: 10px;
 }
 
-.card-content .description{
+.card-content .description {
     margin: 10px 0;
 }
 
-.card-info{
+.card-info {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
-.card-info-column{
+.card-info-column {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.info-block{
+.info-block {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.info-block img{
+.info-block img {
     width: 40px;
 }
 
-.card-info .circle-img{
+.card-info .circle-img {
     border: 3px solid var(--main-color);
     border-radius: 50%;
     display: flex;
@@ -262,13 +313,13 @@ main{
     margin: 10px;
 }
 
-.card-info .info-column{
+.card-info .info-column {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.card-info .circle{
+.card-info .circle {
     border: 3px solid var(--main-color);
     border-radius: 50%;
     display: flex;
@@ -278,9 +329,9 @@ main{
     margin: 10px;
 }
 
-.card button{
+.card button {
     background-color: var(--additional-color);
-    color:var(--text-color);
+    color: var(--text-color);
     border: none;
     width: 200px;
     height: 50px;
@@ -288,7 +339,7 @@ main{
     transition: 0.5s;
 }
 
-.card button:hover{
+.card button:hover {
     background-color: var(--main-color);
     transition: 0.5s;
     transform: scale(1.2);
@@ -296,13 +347,13 @@ main{
 
 /* FOOTER */
 
-footer{
+footer {
     width: 100%;
     background-color: var(--main-color);
     padding: 30px;
 }
 
-.our-contacts{
+.our-contacts {
     margin-left: 40%;
     font-size: 34px;
     font-weight: bold;
@@ -310,7 +361,7 @@ footer{
     margin-bottom: 30px;
 }
 
-.footer-content{
+.footer-content {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -318,7 +369,7 @@ footer{
     align-items: center;
 }
 
-.contact-info-block{
+.contact-info-block {
     margin: 20px 0;
 }
 
